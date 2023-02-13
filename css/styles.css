@@ -5,59 +5,93 @@
 }
 body {
     font-family: 'Roboto';
-    background-color: gray;
+    background-color: rgb(37, 35, 44);
     height: 100vh;
 
 }
-.container{
-    display: grid;
+.card {
+    display: flex;
+    flex-direction: column;
 }
-.col {
-    height: 50px;
-    padding-left: 20px;
-    background-color: aquamarine;
-    color: rgb(0, 0, 0);
-    display: inline-block;
-}
-.col:nth-child(even){
-    background-color: aliceblue;
-    color: black;
-}
-.col:nth-of-type(1){
-    background-color: aliceblue;
-    grid-column:1/5;
 
+
+.card__content {
+    /* Take available height */
+    flex: 1;
+    background-color: rgb(16, 16, 75);
+    width: 400px;
+    height: 1000px;
+    border: 1px solid;
+    padding: 200px;
+    margin-top: 250px;
+    margin-left: 600px;
 }
-.col:nth-of-type(12){
-    grid-column: 4/ span 13;
-    /* background-color: aliceblue;
-    grid-column:1/3; */
+.flex{
+    
+    display: flex;
+    flex: 0 1 25%;
+    flex-direction: row ;
+    justify-content: center;
+    width:px;
+}
+
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.container{
+    display:flex;
+    margin-top: 100px;
+    margin-left: 100px;
+    flex-wrap: wrap;
+    flex: 0 1 60%;
+    min-width:400px;
+}
+
+.buttons,.result{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+}
+.result{
+    height: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5em;
+    background: #ffffff;
+    color:#000000;
+    padding:0 10px;
+}
+.button{
+    display:flex;
+    flex: 1 0 21%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-top: 10px;
+    border-top:none;
+    border-left:none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top,#d2d2d2,#ddd);
+    font-size:2em;
+}
+.button:nth-child(4n+1){
+    border: #d2d2d2; 
+} 
+.button:nth-child(4n),.button:last-child{
+    border: white;
+    background: #09247c;
+    color: #ffffff;
     
 }
-@media screen and (max-width : 480px) {
-    .col {
-        height: 50px;
-        padding-left: 20px;
-        background-color: aquamarine;
-        color: rgb(0, 0, 0);
-        display: inline-block;
-        gap: 4px;
-    }
-    .col:nth-child(even){
-        background-color: aliceblue;
-        color: black;
-    }
-    .col:nth-of-type(1){
-        background-color: aliceblue;
-        grid-column:1/2;
-    
-    }
-    .col:nth-of-type(12){
-        grid-column: 4/ span 13;
-        grid-row: 3/4   ;
-        /* background-color: aliceblue;
-        grid-column:1/3; */
-        
-    }
-    
+.zero-btn{
+    flex-grow: 2;
+}
+.doubleBordered{
+    border: 2px solid rgb(0, 0, 0);
 }
